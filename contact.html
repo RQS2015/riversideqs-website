@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EDIT: Page title -->
+  <title>Contact Us – Riverside QS Services Limited</title>
+
+  <!-- EDIT: Page description (keep under 160 characters) -->
+  <meta name="description" content="Contact Riverside QS Services Limited in Usk, Monmouthshire. Call +44 7802 686146 or send us a message to discuss your quantity surveying requirements.">
+
+  <meta name="robots" content="index, follow">
+
+  <!-- EDIT: Replace YOUR-DOMAIN with your actual domain -->
+  <link rel="canonical" href="https://YOUR-DOMAIN/contact.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Riverside QS Services Limited">
+  <meta property="og:locale" content="en_GB">
+  <!-- EDIT: Replace YOUR-DOMAIN with your actual domain -->
+  <meta property="og:url" content="https://YOUR-DOMAIN/contact.html">
+  <meta property="og:title" content="Contact Us – Riverside QS Services Limited">
+  <meta property="og:description" content="Get in touch with Riverside QS Services Limited in Usk, Monmouthshire. Call or send us a message.">
+  <!-- EDIT: Replace YOUR-DOMAIN with your actual domain -->
+  <meta property="og:image" content="https://YOUR-DOMAIN/images/og-image.jpg">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Skip navigation -->
+<a href="#content" class="skip-link">Skip to content</a>
+
+<!-- ============================================ -->
+<!-- HEADER & NAVIGATION - structure, don't edit  -->
+<!-- ============================================ -->
+<header class="site-header">
+  <div class="header-inner">
+    <!-- EDIT: Company name -->
+    <a href="/" class="site-logo">Riverside QS Services Limited</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </button>
+
+    <nav class="site-nav" id="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+
+  <!-- ======================================== -->
+  <!-- PAGE HEADER - edit heading below         -->
+  <!-- ======================================== -->
+  <section class="page-header">
+    <div class="page-header-layout">
+      <div class="page-header-text">
+        <!-- EDIT: Page heading -->
+        <h1>Contact Us</h1>
+        <p>Get in touch with Riverside QS Services Limited to discuss your quantity surveying requirements.</p>
+      </div>
+      <div class="page-header-media">
+        <!-- EDIT: Page image (replace src and alt) -->
+        <img src="images/contact.jpg" alt="Riverside QS Services Limited logo" class="page-header-img" loading="lazy" width="420" height="186">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================== -->
+  <!-- CONTACT SECTION - details + form columns -->
+  <!-- ======================================== -->
+  <section class="section">
+    <h2>Get in Touch</h2>
+
+    <div class="contact-columns">
+      <div class="contact-details">
+        <div class="contact-info">
+          <!-- EDIT: Company address -->
+          <p><strong>Riverside QS Services Limited</strong></p>
+          <p>Low Barn</p>
+          <p>Llancayo Court Business Park</p>
+          <p>Usk, Monmouthshire</p>
+          <p>NP15 1HY</p>
+        </div>
+
+        <div class="contact-info">
+          <!-- EDIT: Phone number (update both the href and visible text) -->
+          <p><strong>Tel:</strong> <a href="tel:+447802686146">+44 7802 686146</a></p>
+        </div>
+      </div>
+
+      <div class="contact-form-col">
+        <h3>Send Us a Message</h3>
+
+        <!-- EDIT: Replace YOUR_FORM_ID with your Formspree form ID -->
+        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+          <div class="form-group">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone <span>(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send Message</button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================ -->
+<!-- FOOTER - edit copyright name only            -->
+<!-- ============================================ -->
+<footer class="site-footer">
+  <!-- EDIT: Copyright holder name -->
+  <p>&copy; <script>document.write(new Date().getFullYear())</script> Riverside QS Services Limited. All rights reserved.</p>
+</footer>
+
+<!-- Mobile nav toggle script -->
+<script>
+(function () {
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open);
+  });
+})();
+</script>
+
+</body>
+</html>

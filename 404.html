@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found – Riverside QS Services Limited</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Skip navigation -->
+<a href="#content" class="skip-link">Skip to content</a>
+
+<!-- ============================================ -->
+<!-- HEADER & NAVIGATION - structure, don't edit  -->
+<!-- ============================================ -->
+<header class="site-header">
+  <div class="header-inner">
+    <!-- EDIT: Company name -->
+    <a href="/" class="site-logo">Riverside QS Services Limited</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </button>
+
+    <nav class="site-nav" id="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+
+  <section class="error-page section">
+    <h1>404</h1>
+    <h2>Page Not Found</h2>
+    <p>Sorry, the page you&rsquo;re looking for doesn&rsquo;t exist or has been moved.</p>
+    <a href="/" class="btn">Return to Home</a>
+  </section>
+
+</main>
+
+<!-- ============================================ -->
+<!-- FOOTER - edit copyright name only            -->
+<!-- ============================================ -->
+<footer class="site-footer">
+  <!-- EDIT: Copyright holder name -->
+  <p>&copy; <script>document.write(new Date().getFullYear())</script> Riverside QS Services Limited. All rights reserved.</p>
+</footer>
+
+<!-- Mobile nav toggle script -->
+<script>
+(function () {
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open);
+  });
+})();
+</script>
+
+</body>
+</html>

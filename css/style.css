@@ -1,0 +1,562 @@
+/* ============================================
+   Riverside QS Services Limited - Stylesheet
+   ============================================ */
+
+/* --- Custom Properties --- */
+:root {
+  --color-dark: #000000;
+  --color-dark-translucent: rgba(0, 0, 0, 0.4);
+  --color-panel: #efefef;
+  --color-white: #ffffff;
+  --color-off-white: #f5f5f5;
+  --color-text: #6a6a6a;
+  --color-text-light: #aaaaaa;
+  --color-heading: #333333;
+  --color-link: #979395;
+  --color-btn: #d7d7d7;
+  --color-btn-hover: #222222;
+  --color-border: #bbbbbb;
+  --color-focus: #f0c040;
+  --font-stack: 'Open Sans', 'Lucida Sans', system-ui, sans-serif;
+  --max-width: 1000px;
+  --header-height: 50px;
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-stack);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* --- Focus Styles --- */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* --- Skip Navigation --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--color-focus);
+  color: var(--color-dark);
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  font-weight: 700;
+  border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* --- Header --- */
+.site-header {
+  background-color: var(--color-dark);
+  border-bottom: 1px solid #333;
+  color: var(--color-text-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+}
+
+.site-logo {
+  color: var(--color-panel);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.site-logo:hover {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+/* --- Navigation --- */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--color-text-light);
+}
+
+.nav-toggle svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.site-nav a {
+  color: var(--color-text-light);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  display: block;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--color-panel);
+  text-decoration: none;
+}
+
+/* --- Mobile Navigation --- */
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-dark);
+    border-top: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .site-nav.is-open {
+    display: block;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
+
+  .site-nav a {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+  }
+}
+
+/* --- Main Content --- */
+main {
+  flex: 1;
+  background-color: var(--color-panel);
+}
+
+/* --- Hero Section (two-column: text + image) --- */
+.hero {
+  background-color: var(--color-panel);
+  color: var(--color-text);
+  padding: 2.5rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 1rem;
+}
+
+.hero-media {
+  flex: 0 0 auto;
+  width: 280px;
+}
+
+.hero-img {
+  width: 100%;
+  border: 1px solid var(--color-border);
+}
+
+/* --- Content Sections --- */
+.section {
+  padding: 2.5rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section--alt {
+  background-color: var(--color-off-white);
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section--alt .section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.section p {
+  margin-bottom: 1rem;
+}
+
+.section ul {
+  margin: 1rem 0 1rem 1.5rem;
+}
+
+.section li {
+  margin-bottom: 0.35rem;
+}
+
+/* --- CTA Section --- */
+.cta {
+  background-color: var(--color-dark);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.cta p {
+  max-width: var(--max-width);
+  margin: 0 auto 1.25rem;
+  font-size: 1.1rem;
+}
+
+.cta .btn {
+  display: inline-block;
+  background-color: var(--color-btn);
+  color: var(--color-heading);
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--color-text-light);
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.cta .btn:hover {
+  background-color: var(--color-btn-hover);
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* --- Page Header (inner pages - two-column) --- */
+.page-header {
+  background-color: var(--color-panel);
+  color: var(--color-text);
+  padding: 2.5rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.page-header-layout {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.page-header-text {
+  flex: 1;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-heading);
+}
+
+.page-header-text p {
+  margin-top: 1rem;
+}
+
+.page-header-media {
+  flex: 0 0 auto;
+  width: 280px;
+}
+
+.page-header-img {
+  width: 100%;
+  border: 1px solid var(--color-border);
+}
+
+/* --- Contact Columns --- */
+.contact-columns {
+  display: flex;
+  gap: 3rem;
+}
+
+.contact-details {
+  flex: 0 0 auto;
+  width: 280px;
+}
+
+.contact-form-col {
+  flex: 1;
+}
+
+.contact-form-col h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.contact-form-col .form {
+  max-width: 100%;
+}
+
+/* --- Contact Info --- */
+.contact-info {
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.35rem;
+}
+
+.contact-info a {
+  font-weight: 600;
+}
+
+/* --- Form --- */
+.form {
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--color-heading);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #999;
+  border-radius: 0;
+  font-family: var(--font-stack);
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-heading);
+  outline: 2px solid var(--color-heading);
+  outline-offset: 1px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-submit {
+  display: inline-block;
+  background-color: var(--color-btn);
+  color: var(--color-heading);
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--color-text-light);
+  border-radius: 0;
+  font-family: var(--font-stack);
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.form-submit:hover {
+  background-color: var(--color-btn-hover);
+  color: #ccc;
+}
+
+/* --- 404 Page --- */
+.error-page {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.error-page h1 {
+  font-size: 4rem;
+  color: var(--color-heading);
+  margin-bottom: 0.5rem;
+}
+
+.error-page h2 {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  border: none;
+  padding: 0;
+}
+
+.error-page p {
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+.error-page .btn {
+  display: inline-block;
+  background-color: var(--color-btn);
+  color: var(--color-heading);
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--color-text-light);
+  border-radius: 0;
+  font-weight: 400;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.error-page .btn:hover {
+  background-color: var(--color-btn-hover);
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: var(--color-dark);
+  border-top: 1px solid #333;
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+@media (min-width: 641px) {
+  .hero h1,
+  .page-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .section {
+    padding: 3rem 2rem;
+  }
+
+  .section--alt {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .cta {
+    padding: 3rem 2rem;
+  }
+
+  .hero-media {
+    width: 340px;
+  }
+
+  .page-header-media {
+    width: 340px;
+  }
+}
+
+/* Stack columns on mobile */
+@media (max-width: 640px) {
+  .hero-layout,
+  .page-header-layout,
+  .contact-columns {
+    flex-direction: column;
+  }
+
+  .hero-media,
+  .page-header-media {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact-details {
+    width: 100%;
+  }
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

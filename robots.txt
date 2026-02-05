@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# EDIT: Replace YOUR-DOMAIN with your actual domain
+Sitemap: https://YOUR-DOMAIN/sitemap.xml
