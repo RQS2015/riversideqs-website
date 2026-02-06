@@ -19,7 +19,7 @@
   --color-focus: #f0c040;
   --font-stack: 'Open Sans', 'Lucida Sans', system-ui, sans-serif;
   --max-width: 1000px;
-  --header-height: 50px;
+  --header-height: 80px;
 }
 
 /* --- Reset & Base --- */
@@ -86,9 +86,9 @@ a:hover {
 
 /* --- Header --- */
 .site-header {
-  background-color: var(--color-dark);
-  border-bottom: 1px solid #333;
-  color: var(--color-text-light);
+  background-color: var(--color-white);
+  border-bottom: 3px solid var(--color-dark);
+  color: var(--color-text);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -105,16 +105,19 @@ a:hover {
 }
 
 .site-logo {
-  color: var(--color-panel);
-  font-size: 1.15rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  line-height: 1.2;
 }
 
-.site-logo:hover {
-  text-decoration: none;
-  color: var(--color-white);
+.site-logo img {
+  height: 65px;
+  width: auto;
+  transition: opacity 0.2s;
+}
+
+.site-logo:hover img {
+  opacity: 0.85;
 }
 
 /* --- Navigation --- */
@@ -124,7 +127,7 @@ a:hover {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  color: var(--color-text-light);
+  color: var(--color-heading);
 }
 
 .nav-toggle svg {
@@ -140,7 +143,7 @@ a:hover {
 }
 
 .site-nav a {
-  color: var(--color-text-light);
+  color: var(--color-text);
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
   display: block;
@@ -151,7 +154,7 @@ a:hover {
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
-  color: var(--color-panel);
+  color: var(--color-heading);
   text-decoration: none;
 }
 
@@ -167,9 +170,9 @@ a:hover {
     top: var(--header-height);
     left: 0;
     right: 0;
-    background-color: var(--color-dark);
-    border-top: 1px solid #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: var(--color-panel);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 
   .site-nav.is-open {
@@ -491,9 +494,9 @@ main {
 
 /* --- Footer --- */
 .site-footer {
-  background-color: var(--color-dark);
-  border-top: 1px solid #333;
-  color: var(--color-text-light);
+  background-color: var(--color-panel);
+  border-top: 3px solid var(--color-dark);
+  color: var(--color-text);
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
