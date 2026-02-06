@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# EDIT: Replace YOUR-DOMAIN with your actual domain
-Sitemap: https://YOUR-DOMAIN/sitemap.xml
+# EDIT: Replace riversideqs.com with your actual domain
+Sitemap: https://riversideqs.com/sitemap.xml

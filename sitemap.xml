@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- EDIT: Replace YOUR-DOMAIN with your actual domain -->
+  <!-- EDIT: Replace riversideqs.com with your actual domain -->
   <url>
-    <loc>https://YOUR-DOMAIN/</loc>
+    <loc>https://riversideqs.com/</loc>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN/about.html</loc>
+    <loc>https://riversideqs.com/about.html</loc>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN/contact.html</loc>
+    <loc>https://riversideqs.com/contact.html</loc>
   </url>
 </urlset>
